@@ -1,0 +1,82 @@
+﻿{% extends "web_app/baseWebappENG.html" %}
+{% load staticfiles %}
+ {% block body_block %}
+<div class="container">
+    <h1></h1>
+    <br>
+      <h1></h1>
+    <br>
+
+       <div class="container text-center">
+           <div class="jumbotron">
+
+            <h2 class="contact"><strong>CONTACT</strong></h2><br>
+		   <p><strong>For course registration please contact us at:</strong><br>info@buddhavipassana.hu<br>Contact person: Szaszák Péter<br>tel: +36-30-9082823<br><br><br><strong>The meditation technique practiced in the lineage of Ajahn Tong Sirimangalo can be found also here:</strong><br>
+               <a href="http://www.vipassana.sk" class="text-primary" target="_blank">Slovakia</a><br>
+               <a href="http://www.tisarana.cz" class="text-primary" target="_blank">Czech Republic</a><br>
+               <a href="http://www.vipassana-dhammacari.com" class="text-primary" target="_blank">Germany</a><br>
+               <a href="http://buddhavipassana.ca" class="text-primary" target="_blank">Canada</a><br></p>
+
+           </div>
+</div>
+
+
+<div class="container">
+    <div class="jumbotron">
+<form id="contact-form" method="post" action="contact.php" role="form">
+
+    <div class="controls">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_name">Last Name *</label>
+                    <input id="form_name" type="text" name="vnev" class="form-control" placeholder="Last Name *" required="required" data-error="Firstname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_lastname">First Name*</label>
+                    <input id="form_lastname" type="text" name="knev" class="form-control" placeholder="First Name*" required="required" data-error="Lastname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_email">Email *</label>
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Email cím *" required="required" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_phone">Phone</label>
+                    <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Phone">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Please leave a message here *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send" value="Küldés">
+            </div>
+        </div>
+
+    </div>
+
+</form>
+
+</div>
+
+
+{% endblock %}
